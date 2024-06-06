@@ -1,12 +1,17 @@
 .head-list {
     display: grid;
-    grid-template-columns: auto auto auto;
-}
-
-.head-list div {
-    margin-left: 6%;
+    grid-template-columns: 21% auto auto;
 }
 
 .body-list {
     margin: 20px 0;
+    height: 60vh;
+}
+
+.pnl-options {
+    text-align: center;
+}
+
+.pnl-options span {
+    margin: 0 24px;
 }
