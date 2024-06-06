@@ -34,7 +34,7 @@ Existen otras aplicaciones y sitios web dedicados a la información sobre Marvel
 ### Requisitos
 - Node.js = 16.0
 - npm = 10.2.0
-- CLI = 
+- CLI = 16.2.14
 
 ### Pasos
 1. Instala las dependencias:
