@@ -1,0 +1,12 @@
+.head-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.head-list div {
+    margin-left: 6%;
+}
+
+.body-list {
+    margin: 20px 0;
+}

@@ -1,13 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+
+import { ListRowsComponent } from './components/list-rows/list-rows.component';
+import { RowComponent } from './components/row/row.component';
 
 @NgModule({
-    declarations: [],
+    declarations: [
+        ListRowsComponent,
+        RowComponent
+    ],
     imports: [
         CommonModule,
-        RouterModule
     ],
-    exports: []
+    exports: [
+        ListRowsComponent
+    ]
 })
 export class SharedModule { }
