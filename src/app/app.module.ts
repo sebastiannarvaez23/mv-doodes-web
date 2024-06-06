@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { CharacterModule } from './characters/character.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CharacterModule } from './characters/character.module';
     SharedModule,
     AppRoutingModule,
     CharacterModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

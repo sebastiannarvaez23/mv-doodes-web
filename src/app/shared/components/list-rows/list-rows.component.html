@@ -5,7 +5,10 @@
         <div>Descripción</div>
     </div>
     <div class="body-list">
-        <shared-row></shared-row>
+        <div *ngFor="let character of data">
+            <shared-row [img]="character.thumbnail" [name]="character.name"
+                [description]="character.description"></shared-row>
+        </div>
     </div>
     <div class="pnl-options">
         <button>Anterior</button>

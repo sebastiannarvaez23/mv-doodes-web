@@ -14,7 +14,7 @@ import { CharacterPageComponent } from './pages/character-page/character-page.co
         CharacterPageComponent,
         InformationComponent,
         DetailComponent,
-        ImageComponent,
+        ImageComponent
     ],
     imports: [
         CommonModule,

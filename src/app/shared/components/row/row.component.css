@@ -22,12 +22,16 @@
 .row>div {
     display: flex;
     align-items: center;
-    /* Centra el contenido verticalmente */
     text-align: center;
 }
 
 .row img {
     max-width: 70px;
-    /* Ajusta el tamaño de la imagen */
     height: auto;
+    height: 90px;
+    object-fit: cover;
+}
+
+.desc div {
+    text-align: left;
 }
