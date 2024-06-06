@@ -8,4 +8,5 @@ import { Result } from '../../interfaces/character';
 })
 export class InformationComponent {
     @Input() public character?: Result;
+    @Input() public isLoading: boolean = false;
 }

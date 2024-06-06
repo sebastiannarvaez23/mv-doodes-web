@@ -1,10 +1,24 @@
-<H1>{{character?.name}}</H1>
+<ng-container *ngIf="isLoading">
+    <h1>Loading Character Name...</h1>
+</ng-container>
+<h1>{{character?.name}}</h1>
 <div class="fragment" *ngIf="character?.description">
+    <ng-container *ngIf="isLoading">
+        <span>Loading description...</span>
+    </ng-container>
     <span>{{character?.description}}</span>
 </div>
 <div class="fragment" *ngIf="!character?.description">
+    <ng-container *ngIf="isLoading">
+        <span>Loading description...</span>
+    </ng-container>
     <span>No information to show.</span>
 </div>
 <div class="fragment">
-    <span>Last update: {{character?.modified}}</span>
+    <ng-container *ngIf="isLoading; else showLastUpdate">
+        <span>Last update: Loading...</span>
+    </ng-container>
+    <ng-template #showLastUpdate>
+        <span>Last update: {{character?.modified | date: 'fullDate'}}</span>
+    </ng-template>
 </div>

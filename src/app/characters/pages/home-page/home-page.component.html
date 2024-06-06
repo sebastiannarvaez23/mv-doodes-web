@@ -1,5 +1,6 @@
 <div class="page">
     <h1>Characters from the Marvel Universe</h1>
     <h3>Character List</h3>
-    <shared-list-rows [data]="characters!"></shared-list-rows>
+    <shared-list-rows [currentPage]="currentPage" [countPage]="countPage" [isLoading]="isLoading" [data]="characters!"
+        (onNextPage)="nextPage()" (onBeforePage)="beforePage()"></shared-list-rows>
 </div>

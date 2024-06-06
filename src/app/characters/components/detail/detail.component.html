@@ -1,6 +1,9 @@
 <div class="character-details">
     <div>
         <b>comics:&nbsp;</b>
+        <ng-container *ngIf="isLoading">
+            <span>Loading...</span>
+        </ng-container>
         <ng-container *ngFor="let comic of character?.comics?.items; let isLast = last;">
             <span *ngIf="!isLast; else last">{{comic.name}},&nbsp;</span>
             <ng-template #last>{{comic.name}}.&nbsp;</ng-template>
@@ -11,6 +14,9 @@
     </div>
     <div>
         <b>series:&nbsp;</b>
+        <ng-container *ngIf="isLoading">
+            <span>Loading...</span>
+        </ng-container>
         <ng-container *ngFor="let serie of character?.series?.items; let isLast = last;">
             <span *ngIf="!isLast; else last">{{serie.name}},&nbsp;</span>
             <ng-template #last>{{serie.name}}.&nbsp;</ng-template>
@@ -21,6 +27,9 @@
     </div>
     <div>
         <b>stories:&nbsp;</b>
+        <ng-container *ngIf="isLoading">
+            <span>Loading...</span>
+        </ng-container>
         <ng-container *ngFor="let storie of character?.stories?.items; let isLast = last;">
             <span *ngIf="!isLast; else last">{{storie.name}},&nbsp;</span>
             <ng-template #last>{{storie.name}}.&nbsp;</ng-template>
@@ -31,6 +40,9 @@
     </div>
     <div>
         <b>events:&nbsp;</b>
+        <ng-container *ngIf="isLoading">
+            <span>Loading...</span>
+        </ng-container>
         <ng-container *ngFor="let event of character?.events?.items; let isLast = last;">
             <span *ngIf="!isLast; else last">{{event.name}},&nbsp;</span>
             <ng-template #last>{{event.name}}.&nbsp;</ng-template>

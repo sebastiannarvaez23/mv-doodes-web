@@ -1,8 +1,8 @@
 <div class="page">
-    <character-information [character]="character"></character-information>
+    <character-information [isLoading]="isLoading" [character]="character"></character-information>
     <div class="body-page">
         <character-image [isLoading]="isLoading" [img]="character?.thumbnail"></character-image>
-        <character-detail [character]="character"></character-detail>
+        <character-detail [isLoading]="isLoading" [character]="character"></character-detail>
     </div>
-    <button class="back" [routerLink]="['/characters/list']">Volver</button>
+    <button class="back" [routerLink]="['/characters/list']">Back</button>
 </div>
