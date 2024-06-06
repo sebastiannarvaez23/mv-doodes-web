@@ -1,7 +1,7 @@
 <div class="page">
     <character-information [character]="character"></character-information>
     <div class="body-page">
-        <character-image [img]="character?.thumbnail"></character-image>
+        <character-image [isLoading]="isLoading" [img]="character?.thumbnail"></character-image>
         <character-detail [character]="character"></character-detail>
     </div>
     <button class="back" [routerLink]="['/characters/list']">Volver</button>

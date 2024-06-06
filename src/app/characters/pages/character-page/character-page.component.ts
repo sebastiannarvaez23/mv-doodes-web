@@ -9,8 +9,9 @@ import { Result } from '../../interfaces/character';
     styleUrls: ['./character-page.component.css'],
 })
 export class CharacterPageComponent implements OnInit {
-    characterId?: string;
-    character: Result | undefined;
+    public characterId?: string;
+    public character: Result | undefined;
+    public isLoading: boolean = true;
 
     constructor(
         private route: ActivatedRoute,
@@ -22,8 +23,12 @@ export class CharacterPageComponent implements OnInit {
             this.characterId = params.get('id') || '';
         });
         if (this.characterId) {
+            this.isLoading = true;
             this.characterService.getCharacter(this.characterId).
-                subscribe(character => this.character = character?.data.results[0]);
+                subscribe(character => {
+                    this.character = character?.data.results[0]
+                    this.isLoading = false;
+                });
         }
     }
 }

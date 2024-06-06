@@ -8,6 +8,7 @@ import { Thumbnail } from '../../interfaces/character';
 })
 export class ImageComponent {
     @Input() public img?: Thumbnail;
+    @Input() public isLoading: boolean = true;
 
     getFullImageUrl(): string {
         if (this.img) {
