@@ -1,17 +1,42 @@
 <div class="character-details">
     <div>
-        <b>comics:</b> Avengers: The Initiative (2007) #14, Avengers: The Initiative (2007) #14 (SPOTLIGHT
-        VARIANT),
-        Avengers: The Initiative (2007) #15
+        <b>comics:&nbsp;</b>
+        <ng-container *ngFor="let comic of character?.comics?.items; let isLast = last;">
+            <span *ngIf="!isLast; else last">{{comic.name}},&nbsp;</span>
+            <ng-template #last>{{comic.name}}.&nbsp;</ng-template>
+        </ng-container>
+        <ng-container *ngIf="character?.comics?.items?.length == 0">
+            Not information to show about comics.
+        </ng-container>
     </div>
     <div>
-        <b>series:</b> Avengers: The Initiative (2007 - 2010), Deadpool (1997 - 2002), Marvel Premiere (1972 -
-        1981)
+        <b>series:&nbsp;</b>
+        <ng-container *ngFor="let serie of character?.series?.items; let isLast = last;">
+            <span *ngIf="!isLast; else last">{{serie.name}},&nbsp;</span>
+            <ng-template #last>{{serie.name}}.&nbsp;</ng-template>
+        </ng-container>
+        <ng-container *ngIf="character?.series?.items?.length == 0">
+            Not information to show about series.
+        </ng-container>
     </div>
     <div>
-        <b>stories:</b> Cover #19947, The 3-D Man!, Cover #19949
+        <b>stories:&nbsp;</b>
+        <ng-container *ngFor="let storie of character?.stories?.items; let isLast = last;">
+            <span *ngIf="!isLast; else last">{{storie.name}},&nbsp;</span>
+            <ng-template #last>{{storie.name}}.&nbsp;</ng-template>
+        </ng-container>
+        <ng-container *ngIf="character?.stories?.items?.length == 0">
+            Not information to show about stories.
+        </ng-container>
     </div>
     <div>
-        <b>events:</b> Secret Invasion
+        <b>events:&nbsp;</b>
+        <ng-container *ngFor="let event of character?.events?.items; let isLast = last;">
+            <span *ngIf="!isLast; else last">{{event.name}},&nbsp;</span>
+            <ng-template #last>{{event.name}}.&nbsp;</ng-template>
+        </ng-container>
+        <ng-container *ngIf="character?.events?.items?.length == 0">
+            Not information to show about events.
+        </ng-container>
     </div>
 </div>

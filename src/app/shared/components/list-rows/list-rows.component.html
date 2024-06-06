@@ -1,18 +1,18 @@
 <div>
     <div class="head-list">
         <div></div>
-        <div>Nombre</div>
-        <div>Descripción</div>
+        <div>Name</div>
+        <div>Description</div>
     </div>
     <div class="body-list">
         <div *ngFor="let character of data">
-            <shared-row [img]="character.thumbnail" [name]="character.name"
+            <shared-row [id]="character.id" [img]="character.thumbnail" [name]="character.name"
                 [description]="character.description"></shared-row>
         </div>
     </div>
     <div class="pnl-options">
-        <button>Anterior</button>
+        <button>Before</button>
         <span>Pag. 1/20</span>
-        <button>Siguiente</button>
+        <button>Next</button>
     </div>
 </div>

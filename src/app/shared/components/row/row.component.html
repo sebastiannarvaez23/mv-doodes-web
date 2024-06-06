@@ -1,8 +1,8 @@
-<div class="row">
+<div class=" row" [routerLink]="['/characters', id]">
     <div><img [src]="getFullImageUrl()" alt=""></div>
     <div>{{name}}</div>
     <div class="desc" *ngIf="!description">
-        Sin descripción.
+        Without description.
     </div>
     <div class="desc" *ngIf="description && description.length <= 100">
         {{description}}

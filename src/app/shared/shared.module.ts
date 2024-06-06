@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { ListRowsComponent } from './components/list-rows/list-rows.component';
 import { RowComponent } from './components/row/row.component';
+import { RouterModule } from '@angular/router';
+import { CharacterRoutingModule } from '../characters/character-routing.module';
 
 @NgModule({
     declarations: [
@@ -11,6 +13,8 @@ import { RowComponent } from './components/row/row.component';
     ],
     imports: [
         CommonModule,
+        RouterModule,
+        CharacterRoutingModule
     ],
     exports: [
         ListRowsComponent

@@ -30,6 +30,10 @@
     height: auto;
     height: 90px;
     object-fit: cover;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
 }
 
 .desc div {

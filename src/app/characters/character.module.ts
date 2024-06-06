@@ -7,6 +7,8 @@ import { InformationComponent } from './components/information/information.compo
 import { DetailComponent } from './components/detail/detail.component';
 import { ImageComponent } from './components/image/image.component';
 import { CharacterPageComponent } from './pages/character-page/character-page.component';
+import { RouterModule } from '@angular/router';
+import { CharacterRoutingModule } from './character-routing.module';
 
 @NgModule({
     declarations: [
@@ -18,6 +20,8 @@ import { CharacterPageComponent } from './pages/character-page/character-page.co
     ],
     imports: [
         CommonModule,
+        CharacterRoutingModule,
+        RouterModule,
         SharedModule,
     ]
 })

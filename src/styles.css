@@ -1,37 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --primary-color: rgb(242, 246, 250);
-    --secondary-color: blue;
+    --primary-color: rgb(250, 252, 254);
+    --secondary-color: rgb(80, 80, 91);
     --contrast-one: black;
     --contrast-two: white;
 }
 
 .page {
-    width: 80%;
-    max-width: 1000px;
-    height: 80vh;
-    margin: 50px auto;
+    -moz-box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
     font-family: "Poppins", sans-serif;
-    font-weight: 300;
     font-style: normal;
+    font-weight: 300;
+    height: 85vh;
+    left: 50%;
+    max-width: 1000px;
+    max-height: 670px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
 }
 
 button {
-    border: none;
-    background-color: var(--primary-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 15px 40px;
-    margin: 4px;
-    -webkit-box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
-    box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
+    background-color: var(--primary-color);
     border-radius: 10px;
+    border: none;
+    box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
+    margin: 4px;
+    padding: 15px 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
+    -moz-box-shadow: 6px 5px 18px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 6px 5px 18px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 4px 15px -5px rgba(0, 0, 0, 0.75);
     cursor: pointer;
     transform: scale(1.01);
-    -webkit-box-shadow: 6px 5px 18px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 5px 18px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 5px 4px 15px -5px rgba(0, 0, 0, 0.75);
 }

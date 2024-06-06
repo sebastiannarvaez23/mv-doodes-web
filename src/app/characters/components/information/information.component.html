@@ -1,12 +1,10 @@
-<H1>Nombre del Personaje</H1>
-<div class="fragment">
-    <span><b>Descripcion del personaje</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptas
-        eum
-        fugit
-        facilis. Sint repellat cum
-        praesentium ab velit nobis, architecto molestias explicabo harum placeat, rem sed quo excepturi
-        cumque.</span>
+<H1>{{character?.name}}</H1>
+<div class="fragment" *ngIf="character?.description">
+    <span>{{character?.description}}</span>
+</div>
+<div class="fragment" *ngIf="!character?.description">
+    <span>No information to show.</span>
 </div>
 <div class="fragment">
-    <span>Última modificación: 2014-04-29</span>
+    <span>Last update: {{character?.modified}}</span>
 </div>

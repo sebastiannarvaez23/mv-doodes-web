@@ -52,12 +52,7 @@ export interface Stories {
 export interface StoriesItem {
     resourceURI: string;
     name: string;
-    type: Type;
-}
-
-export enum Type {
-    Cover = "cover",
-    InteriorStory = "interiorStory",
+    type: string;
 }
 
 export interface Thumbnail {

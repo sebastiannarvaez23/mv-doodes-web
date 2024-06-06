@@ -7,6 +7,7 @@ import { Thumbnail } from 'src/app/characters/interfaces/character';
     styleUrls: ['./row.component.css'],
 })
 export class RowComponent {
+    @Input() public id?: number;
     @Input() public img?: Thumbnail;
     @Input() public name?: string;
     @Input() public description?: string;

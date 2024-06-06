@@ -14,14 +14,14 @@ export class HomePageComponent implements OnInit {
     constructor(private characterService: CharacterService) { }
 
     ngOnInit(): void {
-        this.characterService.getCharacters()
-            .subscribe(
-                characters => {
-                    this.characters = characters?.data.results;
-                },
-                error => {
-                    console.error('Error fetching characters:', error);
-                }
-            );
+        this.characters = this.characterService.getCharacters().data.results;
+        /* .subscribe(
+            characters => {
+                this.characters = characters?.data.results;
+            },
+            error => {
+                console.error('Error fetching characters:', error);
+            }
+        ); */
     }
 }
