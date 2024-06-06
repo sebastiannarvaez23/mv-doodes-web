@@ -11,8 +11,8 @@
         </div>
     </div>
     <div class="pnl-options">
-        <button>Before</button>
-        <span>Pag. 1/20</span>
-        <button>Next</button>
+        <button [disabled]="currentPage == 1" (click)="beforePage()">Before</button>
+        <span>Pag. {{currentPage}}/{{countPage}}</span>
+        <button [disabled]="currentPage >= countPage" (click)="nextPage()">Next</button>
     </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CharacterService } from '../../services/character.service';
-import { CharacterResponse, Result } from '../../interfaces/character';
+import { Result } from '../../interfaces/character';
 
 @Component({
     selector: 'character-home-page',
@@ -14,14 +14,11 @@ export class HomePageComponent implements OnInit {
     constructor(private characterService: CharacterService) { }
 
     ngOnInit(): void {
-        this.characters = this.characterService.getCharacters().data.results;
-        /* .subscribe(
-            characters => {
-                this.characters = characters?.data.results;
-            },
-            error => {
-                console.error('Error fetching characters:', error);
-            }
-        ); */
+        if (!localStorage.getItem('cacheStore')) {
+            this.characterService.getCharacters()
+                .subscribe(characters => this.characters = characters?.data.results);
+        } else {
+            this.characters = this.characterService.cacheStore.characters;
+        };
     }
 }
