@@ -1,0 +1,15 @@
+.character-img {
+    width: fit-content;
+    text-align: center;
+    padding: 30px 14px;
+    margin: 20px auto;
+    border-radius: 20px;
+    -webkit-box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 3px 14px -7px rgba(0, 0, 0, 0.75);
+}
+
+.character-img img {
+    width: 380px;
+    border-radius: 10px;
+}
