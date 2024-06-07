@@ -83,3 +83,7 @@ Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](L
 
 ## Interfaces de usuario
 
+<p align="center">
+  <img src="https://github.com/sebastiannarvaez23/mv-opt-web/assets/88569352/0bd56a0d-83b4-4775-ad16-50daf6deb1fb" width="auto" height="450">
+  <img src="https://github.com/sebastiannarvaez23/mv-opt-web/assets/88569352/b4228683-40fc-485a-a9fa-096bd71ea987" width="auto" height="450">
+</p>
