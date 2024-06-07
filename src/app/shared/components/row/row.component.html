@@ -1,0 +1,13 @@
+<div class=" row" [routerLink]="['/characters', id]">
+    <div><img [src]="getFullImageUrl()" alt=""></div>
+    <div>{{name}}</div>
+    <div class="desc" *ngIf="!description">
+        Without description.
+    </div>
+    <div class="desc" *ngIf="description && description.length <= 100">
+        {{description}}
+    </div>
+    <div class="desc" *ngIf="description && description.length > 100">
+        <div>{{ description | slice:0:100 }}...</div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.head-list {
+    display: grid;
+    grid-template-columns: 21% auto auto;
+}
+
+.body-list {
+    margin: 20px 0;
+    height: 50vh;
+    max-height: 400px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0 20px;
+}
+
+.pnl-options {
+    text-align: center;
+}
+
+.pnl-options span {
+    margin: 0 24px;
+}

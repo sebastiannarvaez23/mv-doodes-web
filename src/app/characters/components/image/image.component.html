@@ -1,0 +1,8 @@
+<div class="character-img">
+    <ng-container *ngIf="isLoading; else imageTemplate">
+        <div class="loading-spinner"></div>
+    </ng-container>
+    <ng-template #imageTemplate>
+        <img [src]="getFullImageUrl()" alt="">
+    </ng-template>
+</div>

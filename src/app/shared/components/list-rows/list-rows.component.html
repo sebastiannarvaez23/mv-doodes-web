@@ -1,0 +1,23 @@
+<div>
+    <div class="head-list">
+        <div></div>
+        <div>Name</div>
+        <div>Description</div>
+    </div>
+    <div class="body-list">
+        <div *ngIf="isLoading; else showRows">
+            <shared-row-loading></shared-row-loading>
+        </div>
+        <ng-template #showRows>
+            <div *ngFor="let character of data">
+                <shared-row [id]="character.id" [img]="character.thumbnail" [name]="character.name"
+                    [description]="character.description"></shared-row>
+            </div>
+        </ng-template>
+    </div>
+    <div class="pnl-options">
+        <button [disabled]="currentPage == 1" (click)="beforePage()">Before</button>
+        <span>Pag. {{currentPage}}/{{countPage}}</span>
+        <button [disabled]="currentPage >= countPage" (click)="nextPage()">Next</button>
+    </div>
+</div>
