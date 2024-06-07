@@ -4,12 +4,13 @@ import { Observable, catchError, of, map, delay, tap } from 'rxjs';
 import { CacheStore } from '../interfaces/cache-store';
 import { CharacterResponse } from '../interfaces/character';
 import { getEndpointSecurity } from '../utils/hash';
+import { environment } from 'src/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class CharacterService {
 
     private security = getEndpointSecurity();
-    private apiUrl: string = 'https://gateway.marvel.com:443/v1/public/characters';
+    private apiUrl: string = environment.apiUrl;
     private limit = 5;
 
     public cacheStore: CacheStore = {

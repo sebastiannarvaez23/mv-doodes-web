@@ -27,10 +27,16 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "crypto"
+            ]
           },
           "configurations": {
             "production": {
+              "allowedCommonJsDependencies": [
+                "crypto"
+              ],
               "budgets": [
                 {
                   "type": "initial",

@@ -16,7 +16,7 @@ export class RowComponent {
         if (this.img) {
             return `${this.img.path}.${this.img.extension}`;
         } else {
-            return 'assets/images/placeholder.png';
+            return 'https://previews.123rf.com/images/tkacchuk/tkacchuk2004/tkacchuk200400017/143745488-no-hay-icono-de-imagen-vector-de-l%C3%ADnea-editable-no-hay-imagen-no-hay-foto-disponible-o-no-hay.jpg';
         }
     }
 }
