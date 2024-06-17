@@ -1,7 +1,7 @@
 .character-details {
     padding: 10px 30px;
     height: 48vh;
-    max-height: 350px;
+    max-height: 300px;
     margin-bottom: 20px;
     overflow-y: scroll;
     scrollbar-width: thin;

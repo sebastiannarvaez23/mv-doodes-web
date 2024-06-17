@@ -1,8 +1,9 @@
 .body-page {
     display: grid;
+    height: 40vh;
     grid-template-columns: 40% 60%;
 }
 
-.back {
-    float: right;
+.options {
+    text-align: right;
 }

@@ -4,5 +4,7 @@
         <character-image [isLoading]="isLoading" [img]="character?.thumbnail"></character-image>
         <character-detail [isLoading]="isLoading" [character]="character"></character-detail>
     </div>
-    <button class="back" [routerLink]="['/characters/list']">Back</button>
+    <div class="options">
+        <button class="back" [routerLink]="['/characters/list']">Back</button>
+    </div>
 </div>
