@@ -14,7 +14,6 @@ import { RouterModule } from '@angular/router';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    CharacterModule,
     HttpClientModule,
     RouterModule,
     SharedModule,

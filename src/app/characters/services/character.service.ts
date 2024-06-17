@@ -5,6 +5,7 @@ import { CacheStore } from '../interfaces/cache-store';
 import { CharacterResponse } from '../interfaces/character';
 import { getEndpointSecurity } from '../utils/hash';
 import { environment } from 'src/environments/environment';
+import { getCountPage } from '../utils/paginator';
 
 @Injectable({ providedIn: 'root' })
 export class CharacterService {
@@ -33,17 +34,6 @@ export class CharacterService {
         this.cacheStore = JSON.parse(localStorage.getItem('cacheStore')!);
     }
 
-    private getCountPage(elements: number): number {
-        const totalCharacters: number = elements;
-        const elementsPerPage: number = 5;
-
-        const pageCount: number = totalCharacters % elementsPerPage > 0 ?
-            Math.floor(totalCharacters / elementsPerPage) + 1 :
-            Math.floor(totalCharacters / elementsPerPage);
-
-        return pageCount;
-    }
-
     getCharacter(characterId: string): Observable<CharacterResponse | null> {
         const url: string = `${this.apiUrl}/${characterId}?${this.security}`;
         return this.http.get<CharacterResponse>(url)
@@ -62,7 +52,7 @@ export class CharacterService {
                 map(character => character),
                 tap(characters => {
                     this.cacheStore = {
-                        countPage: this.getCountPage(characters.data.total),
+                        countPage: getCountPage(characters.data.total),
                         currentPage: page,
                         characters: characters.data.results
                     }
